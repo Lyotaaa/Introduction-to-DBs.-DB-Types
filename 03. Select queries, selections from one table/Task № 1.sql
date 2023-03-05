@@ -44,10 +44,10 @@ INSERT INTO performer(performer_id, name)
 VALUES(1, 'Заточка'), (2, 'Rammstein'), (3, 'Noize MC'), (4, 'Oomph'), 
 (5, 'Король и Шут'), (6, 'Sabaton'), (7, 'Eisbrecher'), (8, 'Radio Tapok');
 
-INSERT INTO	genre_performer(music_genre_id, performer_id)
+INSERT INTO genre_performer(music_genre_id, performer_id)
 VALUES(1, 1), (4, 2), (3, 3), (4, 4), (2, 5), (5, 6), (4, 7), (5, 8);
 
-INSERT INTO	album(album_id, name, year_release)
+INSERT INTO album(album_id, name, year_release)
 VALUES(1, 'Грязное дельце', 2018), (2, 'Liebe Ist Für Alle Da', 2009), (3, 'Царь горы', 2016),
 	  (4, 'Wahrheit oder Pflicht', 2004), (5, 'Продавец кошмаров', 2006), (6, 'Bismarck', 2019),
 	  (7, 'Die Hölle muss warten', 2012), (8, 'Наследие', 2022);
@@ -65,7 +65,7 @@ VALUES(1, 'Новый шериф', 229, 1), (2, 'Батя бьёт маму', 20
 	  (17, 'Verrückt', 201, 7), (18, 'Miststück 2012', 203, 7), (19, 'Tanz Mit Mir', 198, 7),
 	  (20, 'Черный октябрь', 227, 8), (21, 'Высота 776', 183, 8), (22, 'Жизнь за царя', 218, 8);
 
-INSERT INTO	collection(collection_id, name, year_release)
+INSERT INTO collection(collection_id, name, year_release)
 VALUES(1, 'Сборник № 1', 2004), (2, 'Сборник № 2', 2006), (3, 'Сборник № 3', 2009),
 	  (4, 'Сборник № 4', 2012), (5, 'Сборник № 5', 2016), (6, 'Сборник № 6', 2018),
 	  (7, 'Сборник № 7', 2019), (8, 'Сборник № 8', 2022);
