@@ -79,4 +79,22 @@ VALUES(1, 16), (1, 20), (1, 21), (1, 22),
 	(6, 1), (6, 3), (6, 7),
 	(7, 13), (7, 8), (7, 15),
 	(8, 11), (8, 12), (8, 14);
+
+SELECT name, year_release FROM album
+WHERE year_release = 2018;
+
+
+
+
+SELECT name, duration FROM track
+WHERE duration >= 210;
+
+SELECT name FROM collection
+WHERE 2018 <= year_release AND year_release <= 2020;
+
+SELECT name FROM performer
+WHERE name NOT LIKE '% %';
+
+SELECT name FROM track
+WHERE name LIKE '%My%' OR '%Мой%';
 	
