@@ -6,8 +6,14 @@ INSERT INTO music_genre(music_genre_id, name)
            (5, 'Хеви-метал');
 
 INSERT INTO performer(performer_id, name)
-VALUES (1, 'Заточка'), (2, 'Rammstein'), (3, 'Noize MC'), (4, 'Oomph'), 
-	(5, 'Король и Шут'), (6, 'Sabaton'), (7, 'Eisbrecher'), (8, 'Radio Tapok');
+    VALUES (1, 'Заточка'),
+           (2, 'Rammstein'),
+           (3, 'Noize MC'),
+           (4, 'Oomph'),
+           (5, 'Король и Шут'),
+           (6, 'Sabaton'),
+           (7, 'Eisbrecher'),
+           (8, 'Radio Tapok');
 
 INSERT INTO genre_performer(music_genre_id, performer_id)
 VALUES (1, 1), (4, 2), (3, 3), (4, 4), (2, 5), (5, 6), (4, 7), (5, 8);
