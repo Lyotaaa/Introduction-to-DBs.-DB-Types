@@ -23,6 +23,6 @@ WHERE name NOT LIKE '% %';
 SELECT name 
 FROM track
 WHERE name LIKE '%My%' 
-	OR name LIKE '%Мой%'
-	OR name LIKE '%my%' 
-	OR name LIKE '%мой%';
+    OR name LIKE '%Мой%'
+    OR name LIKE '%my%' 
+    OR name LIKE '%мой%';
