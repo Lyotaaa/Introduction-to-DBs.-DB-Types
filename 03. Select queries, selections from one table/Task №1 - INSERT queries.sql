@@ -1,11 +1,11 @@
-INSERT INTO music_genre(music_genre_id, name)
+INSERT INTO music_genre (music_genre_id, name)
     VALUES (1, 'Кантри-рэп'), 
            (2, 'Панк'), 
            (3, 'Рэп-рок'), 
            (4, 'Индастриал'), 
            (5, 'Хеви-метал');
 
-INSERT INTO performer(performer_id, name)
+INSERT INTO performer (performer_id, name)
     VALUES (1, 'Заточка'),
            (2, 'Rammstein'),
            (3, 'Noize MC'),
@@ -15,13 +15,21 @@ INSERT INTO performer(performer_id, name)
            (7, 'Eisbrecher'),
            (8, 'Radio Tapok');
 
-INSERT INTO genre_performer(music_genre_id, performer_id)
-VALUES (1, 1), (4, 2), (3, 3), (4, 4), (2, 5), (5, 6), (4, 7), (5, 8);
+INSERT INTO genre_performer (music_genre_id, performer_id)
+    VALUES (1, 1), (4, 2),
+           (3, 3), (4, 4),
+           (2, 5), (5, 6),
+           (4, 7), (5, 8);
 
-INSERT INTO album(album_id, name, year_release)
-VALUES (1, 'Грязное дельце', 2018), (2, 'Liebe Ist Für Alle Da', 2009), (3, 'Царь горы', 2016),
-	(4, 'Wahrheit oder Pflicht', 2004), (5, 'Продавец кошмаров', 2006), (6, 'Bismarck', 2019),
-	(7, 'Die Hölle muss warten', 2012), (8, 'Наследие', 2022);
+INSERT INTO album (album_id, name, year_release)
+    VALUES (1, 'Грязное дельце', 2018), 
+           (2, 'Liebe Ist Für Alle Da', 2009),
+           (3, 'Царь горы', 2016),
+           (4, 'Wahrheit oder Pflicht', 2004),
+           (5, 'Продавец кошмаров', 2006),
+           (6, 'Bismarck', 2019),
+           (7, 'Die Hölle muss warten', 2012),
+           (8, 'Наследие', 2022);
 	 
 INSERT INTO performer_album(performer_id, album_id)
 VALUES (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8);
