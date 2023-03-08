@@ -1,5 +1,9 @@
 INSERT INTO music_genre(music_genre_id, name)
-VALUES (1, 'Кантри-рэп'), (2, 'Панк'), (3, 'Рэп-рок'), (4, 'Индастриал'), (5, 'Хеви-метал');
+    VALUES (1, 'Кантри-рэп'), 
+	       (2, 'Панк'), 
+		   (3, 'Рэп-рок'), 
+		   (4, 'Индастриал'), 
+		   (5, 'Хеви-метал');
 
 INSERT INTO performer(performer_id, name)
 VALUES (1, 'Заточка'), (2, 'Rammstein'), (3, 'Noize MC'), (4, 'Oomph'), 
