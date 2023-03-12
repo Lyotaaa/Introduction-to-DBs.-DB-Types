@@ -30,7 +30,8 @@ INSERT INTO album (album_id, name_album, year_release)
            (6, 'Bismarck', 2020),
            (7, 'Die Hölle muss warten', 2012),
            (8, 'Наследие', 2022),
-           (9, 'Солянка', 2020);
+           (9, 'Солянка', 2020),
+           (10, 'Задание', 2023);
 	 
 INSERT INTO performer_album(performer_id, album_id)
     VALUES (1, 1), (2, 2),
@@ -66,8 +67,10 @@ INSERT INTO track(track_id, name_track, duration, album_id)
            (22, 'Жизнь за царя', 218, 8),
            (23, 'Наутёк', 219, 9),
            (24, 'Руки выше!', 265, 9),
-           (25, 'Слишком', 216, 9);
-
+           (25, 'Слишком', 216, 9),
+           (26, 'Петропавловск', 237, 9),
+           (27, 'Task', 250, 10);
+     
 INSERT INTO collection(collection_id, name_collection, year_release)
     VALUES (1, 'Сборник № 1', 2004),
            (2, 'Сборник № 2', 2006),
