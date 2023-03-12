@@ -1,32 +1,3 @@
-1. Название и год выхода альбомов, вышедших в 2018 году.
-SELECT name_album, year_release
-FROM album
-WHERE year_release = 2018;
--- 2. Название и продолжительность самого длительного трека.
-SELECT name_track, duration
-FROM track
-ORDER BY duration DESC
-LIMIT 1;
--- 3. Название треков, продолжительность которых не менее 3,5 минут.
-SELECT name_track, duration
-FROM track
-WHERE duration >= 210
-ORDER BY duration;
--- 4. Названия сборников, вышедших в период с 2018 по 2020 год включительно.
-SELECT name_collection
-FROM collection
-WHERE 2018 <= year_release AND year_release <= 2020;
--- 5. Исполнители, чьё имя состоит из одного слова.
-SELECT name_performer
-FROM performer
-WHERE name_performer NOT LIKE '% %';
--- 6. Название треков, которые содержат слово «мой» или «my».
-SELECT name_track 
-FROM track
-WHERE name_track LIKE '%My%' 
-   OR name_track LIKE '%Мой%'
-   OR name_track LIKE '%my%' 
-   OR name_track LIKE '%мой%';
 -- 1. Количество исполнителей в каждом жанре.	
 SELECT name_genre AS ng, count(performer_id)
 FROM music_genre AS mg
@@ -73,3 +44,9 @@ FROM track AS t
 LEFT JOIN track_collection AS tc ON t.track_id = tc.track_id 
 WHERE collection_id IS NULL;
 -- 8. Исполнитель или исполнители, написавшие самый короткий по продолжительности трек, — теоретически таких треков может быть несколько.
+SELECT name_performer, name_track, duration 
+FROM track AS t
+JOIN album AS a ON t.album_id  = a.album_id 
+JOIN performer_album AS pa ON a.album_id = pa.album_id 
+JOIN performer AS p ON pa.performer_id = p.performer_id 
+WHERE duration = (SELECT min(duration) FROM track);
