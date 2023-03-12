@@ -50,3 +50,23 @@ JOIN album AS a ON t.album_id  = a.album_id
 JOIN performer_album AS pa ON a.album_id = pa.album_id 
 JOIN performer AS p ON pa.performer_id = p.performer_id 
 WHERE duration = (SELECT min(duration) FROM track);
+-- 9. Названия альбомов, содержащих наименьшее количество треков.
+SELECT DISTINCT name_album, count(track_id)
+FROM album AS a
+JOIN track AS t ON a.album_id = t.album_id
+GROUP BY name_album
+ORDER BY count(track_id)
+LIMIT 1;
+-- 9. Названия альбомов, содержащих наименьшее количество треков.
+SELECT name_album
+FROM album
+WHERE album_id IN (
+    SELECT album_id 
+    FROM track
+    GROUP BY album_id
+    HAVING count(album_id) = (
+        SELECT count(track_id)
+        FROM track
+        GROUP BY album_id
+        ORDER BY count
+        LIMIT 1));
